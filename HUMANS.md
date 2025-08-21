@@ -642,3 +642,210 @@ Please confirm understanding before continuing.
 - Emergency reload procedures restore proper behavior quickly
 
 Remember: Claude Code learns from your instructions and feedback within each conversation, but context compacting can cause memory loss. Invest in persistent documentation and proactive context management to maintain productivity across long sessions.
+
+## The Human's Role: Technical Leader and Manager
+
+### The Hybrid Leadership Model
+
+When working with Claude Code, humans should adopt a hybrid role combining **Technical Leadership** and **Engineering Management**. This dual responsibility ensures both code quality and effective collaboration.
+
+### Technical Leader Responsibilities
+
+#### Code Review with Staff-Level Rigor
+Treat every output from Claude Code as code submitted by a junior engineer requiring thorough review:
+
+**Architecture Review:**
+- Evaluate design decisions and architectural choices
+- Ensure proper separation of concerns and modularity
+- Verify alignment with existing system architecture
+- Identify potential scalability and maintainability issues
+
+**Code Quality Assessment:**
+```
+Review Checklist:
+□ Code follows established patterns and conventions
+□ Proper error handling and edge case coverage
+□ Security considerations addressed appropriately
+□ Performance implications considered
+□ Testing strategy is comprehensive
+□ Documentation is adequate and accurate
+```
+
+**Technical Standards Enforcement:**
+- Verify adherence to coding standards and best practices
+- Check for proper abstraction levels and code reusability
+- Ensure dependency management is appropriate
+- Validate API design and interface contracts
+
+#### Design Guidance
+- Provide technical direction and architectural constraints
+- Guide technology choices and implementation approaches
+- Set technical quality gates and acceptance criteria
+- Review and approve technical debt decisions
+
+### Engineering Manager Responsibilities
+
+#### Task Decomposition and Planning
+- Break down complex requirements into manageable tasks
+- Set clear deliverables and success criteria
+- Establish realistic timelines and priorities
+- Identify dependencies and potential blockers
+
+#### Performance Management
+```
+Management Approach:
+- Provide clear, specific feedback on outputs
+- Set expectations for code quality and completeness
+- Guide career development through challenging assignments
+- Recognize good work and correct substandard performance
+```
+
+#### Process Oversight
+- Ensure proper development workflow adherence
+- Verify testing and quality assurance processes
+- Monitor compliance with project standards
+- Facilitate knowledge sharing and documentation
+
+#### Communication and Coordination
+- Translate business requirements into technical specifications
+- Provide context about user needs and business constraints
+- Coordinate with stakeholders and communicate progress
+- Manage scope changes and requirement clarifications
+
+### Effective Review Practices
+
+#### Pre-Implementation Reviews
+Before Claude Code begins coding:
+```
+Requirements Review:
+- Are the requirements complete and unambiguous?
+- Have all edge cases been considered?
+- Are there any missing technical constraints?
+- Is the proposed approach aligned with system architecture?
+```
+
+#### Code Review Process
+When reviewing Claude Code's output:
+
+**First Pass - High Level:**
+- Does the solution solve the stated problem?
+- Is the approach technically sound?
+- Are there any obvious architectural red flags?
+- Does it integrate properly with existing systems?
+
+**Second Pass - Implementation Details:**
+- Is the code readable and maintainable?
+- Are variable names and function signatures appropriate?
+- Is error handling comprehensive?
+- Are there adequate comments and documentation?
+
+**Third Pass - Quality and Security:**
+- Are there any security vulnerabilities?
+- Is the code performant for expected usage?
+- Are all edge cases handled appropriately?
+- Is the test coverage adequate?
+
+#### Feedback Patterns
+
+**Constructive Technical Feedback:**
+```
+❌ "This is wrong"
+✅ "The current approach has a race condition in the user authentication flow. Consider using a lock or atomic operations to ensure thread safety."
+
+❌ "Fix this"
+✅ "The error handling here doesn't follow our established pattern. Please use the ErrorHandler utility from src/utils/error.ts and ensure all errors are logged with appropriate context."
+```
+
+**Architectural Guidance:**
+```
+❌ "Don't do it this way"
+✅ "This implementation tightly couples the service layer to the UI components. Let's refactor to use the repository pattern established in UserRepository.ts to maintain separation of concerns."
+```
+
+### Setting Technical Standards
+
+#### Quality Gates
+Establish non-negotiable quality standards:
+```markdown
+## Technical Quality Gates
+1. All code must pass static analysis (linting, type checking)
+2. Unit test coverage must meet established thresholds
+3. Integration tests must pass for affected functionality
+4. Security scan must show no high-severity vulnerabilities
+5. Performance tests must meet established benchmarks
+```
+
+#### Documentation Requirements
+```markdown
+## Documentation Standards
+- Public APIs must have complete JSDoc/docstring documentation
+- Complex algorithms require inline comments explaining approach
+- Architecture decisions must be documented in ADRs
+- README files must be updated for new features
+- Migration guides required for breaking changes
+```
+
+### Managing Technical Debt
+
+#### Debt Assessment
+Regularly evaluate technical debt introduced by Claude Code:
+- Identify shortcuts taken for rapid delivery
+- Assess long-term maintainability impact
+- Prioritize debt reduction efforts
+- Plan refactoring initiatives
+
+#### Debt Communication
+```
+Technical Debt Discussion:
+"The current implementation works but creates technical debt in our authentication system. We should schedule time next sprint to refactor this to use the established OAuth pattern. The current approach will become a maintenance burden as we scale."
+```
+
+### Career Development Approach
+
+Treat interactions with Claude Code as mentoring opportunities:
+
+#### Skill Development
+- Introduce increasingly complex challenges
+- Provide learning opportunities through code review feedback
+- Encourage exploration of new technologies within project constraints
+- Share context about business requirements and user needs
+
+#### Growth Feedback
+```
+Development Feedback Pattern:
+"Your implementation of the caching layer shows good understanding of performance optimization. To take this to the next level, consider how this pattern could be applied to other data-heavy operations in the system. Also, think about cache invalidation strategies for the user preferences feature we're planning."
+```
+
+### Success Metrics for Human Leadership
+
+#### Technical Leadership Success
+- Code quality consistently meets or exceeds team standards
+- Architectural decisions align with long-term system goals
+- Technical debt is managed proactively
+- Security and performance requirements are consistently met
+
+#### Management Success
+- Tasks are completed within estimated timeframes
+- Requirements are clearly communicated and understood
+- Progress is visible and measurable
+- Continuous improvement is evident in collaboration patterns
+
+### Common Leadership Anti-Patterns
+
+#### Micromanagement Red Flags
+```
+❌ Dictating every implementation detail
+❌ Not allowing any creative problem-solving
+❌ Requiring approval for every minor decision
+❌ Focusing only on syntax rather than design
+```
+
+#### Under-Management Warning Signs
+```
+❌ Accepting poor quality code without feedback
+❌ Not providing sufficient technical context
+❌ Failing to establish clear quality standards
+❌ Not reviewing outputs before they're considered complete
+```
+
+Remember: The goal is to combine the technical depth of a staff engineer with the people development skills of an effective engineering manager, creating an environment where Claude Code can produce high-quality work while continuously improving its understanding of your project and standards.
